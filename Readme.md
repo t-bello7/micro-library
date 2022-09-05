@@ -1,51 +1,50 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+# Micro Library
 
+## Description
+> In this project, we built a tool that helps to record what books are in the library and who borrows them from a fictitious OOP University library. This app will allow you to:
+> - Add new students or teachers.
+> - Add new books.
+> - Save records of who borrowed a given book and when.
 
-# Project requirements
-Projects list
-You will be building your "OOP school library" app. Here is the list of projects that will guide you through the steps described above. You will find details about each of the project requirements in the upcoming program activities. In some of the projects, you will be working collaboratively by using pair programming.
-
-## Project 1: add Person, Student, and Teacher classes.
-
-- Create class Person with the following:
-  - Instance vars: @id, @name, and @age.
-  - Constructor with name, age, and parent_permission as parameter. name and parent_permission are optional and have default values of "Unknown" and true.
-  - Getters for @id, @name, and @age.
-  - Setters for @name and @age.
-  - Private method is_of_age? that returns true if @age is greater or equal to 18 and false otherwise.
-  - Public method can_use_services? that returns true if person is of age or if they have permission from parents.
-- Create class Student with the following:
-  - Inherits from Person.
-  - Constructor extends parent's constructor by adding @classroom and a parameter for it.
-  - Method play_hooky that returns "¯\(ツ)/¯".
-- Create class Teacher with the following:
-  - Inherits from Person.
-  - Constructor extends parent's constructor by adding @specialization and a parameter for it.
-  - Override can_use_services? so it always returns true.
-  - Each class should be saved in a separate file.
-
-## Project 2: use the "Decorator" design pattern.
-## Project 4: add basic UI.
-## Project 5: refactor your code.
-## Project 6: preserve data.
-## Project 7: unit tests.
-
+## Built With
+- Ruby
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-- Ruby
-### Setup
+- [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
+- [Ruby](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md)
 
+### Setup
+- With git, clone the code to your machine, or download a ZIP of all the files directly.
+- [Download the ZIP file from this location](https://github.com/t-bello7/micro-library/archive/refs/heads/dev.zip) or run the following [git](https://git-scm.com/) command to clone the files to your machine:
+
+```
+git clone https://github.com/t-bello7/micro-library.git
+```
+- Once the files are on your machine, open the **Micro-library** folder in [Visual Studio Code](https://code.visualstudio.com/download)
 ### Install
+- After opening the files in Visual Studio Code, open the **VS Code** integrated terminal and run the following commands:
+
+```
+bundle install
+```
+This will install all the packages and dependencies used in the project.
 
 ### Usage
+- Run the command in your terminal below to run the ruby program
 
+```
+ ruby main.rd to run
+```
 ### Run tests
-
-
+- Run the command in your terminalbelow for linter checks
+```
+rubocop
+```
 ## Authors
 
 👤 **Author1**
@@ -73,5 +72,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
