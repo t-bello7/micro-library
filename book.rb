@@ -4,10 +4,10 @@ class Book
   def initialize(title, author)
     @title = title
     @author = author
-    @books = []
+    @rentals = []
   end
 
-  def add_rental(book)
-    @books << book
+  def add_rental(rental)
+    @rentals << rental
   end
 end
