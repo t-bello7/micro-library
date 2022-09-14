@@ -45,7 +45,7 @@ def display
   puts
   puts 'Please choose an option by entering a number:'
   puts ['1 - List all books', '2 - List all people', '3 - Create a person', '4 - Create a book',
-        '5 - Create a rental', '6 - List all rentals for a given id', '7 - exit']
+        '5 - Create a rental', '6 - List all rentals for a given id', '7 - Exit']
 end
 
 def display_books
@@ -54,8 +54,7 @@ def display_books
   end
 end
 
-def
-def(_display_people)
+def display_people
   list_people.each do |n|
     puts "[#{n.class.name}] Name: #{n.name}, ID: #{n.id}, Age: #{n.age}"
   end
