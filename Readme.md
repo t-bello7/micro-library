@@ -70,6 +70,9 @@ Give a ⭐️ if you like this project!
 - Inspiration
 - etc
 
+## Resources
+- https://learn.co/lessons/ruby-objects-has-many-readme
+
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
