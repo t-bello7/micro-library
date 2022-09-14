@@ -5,9 +5,10 @@ class Nameable
 end
 
 class Person < Nameable
-  attr_reader :id
-  attr_accessor :name, :age, :rental
+  attr_reader :id, :parent_permission
+  attr_accessor :name, :age, :rentals
 
+  @@instances = []
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
     @id = Random.rand(1..1000)
@@ -15,6 +16,7 @@ class Person < Nameable
     @age = age
     @parent_permission = parent_permission
     @rentals = []
+    @@instances << self
   end
 
   def can_use_services?
@@ -27,6 +29,10 @@ class Person < Nameable
 
   def add_rental(rental)
     @rentals << rental
+  end
+
+  def self.all
+    @@instances
   end
 
   private
@@ -61,10 +67,3 @@ class TrimmerDecorator < NameableBaseDecorator
     @nameable.correct_name[0...10] if @nameable.correct_name.length > 10
   end
 end
-
-person = Person.new(22, 'maximilianus')
-puts person.correct_name
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
