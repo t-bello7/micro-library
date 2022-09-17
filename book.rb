@@ -1,5 +1,5 @@
 class Book
-  attr_accessor :title
+  attr_accessor :title, :author, :rentals
 
   @@instances = []
   def initialize(title, author)
