@@ -63,7 +63,7 @@ class App
   end
 
   def display_create_people
-    person_type, age, name, more_info = grab_person_data
+    person_type, age, name = grab_person_data
     case person_type
     when 2
       print 'specialization:'
@@ -80,7 +80,7 @@ class App
   end
 
   def display_create_book
-    title, auther = grab_book_data
+    title, author = grab_book_data
     create_book(title, author)
     puts 'Book created successfully'
   end
