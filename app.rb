@@ -3,6 +3,8 @@ require_relative './person'
 require_relative './rental'
 require_relative './student'
 require_relative './teacher'
+require_relative './require_input'
+
 class App
   def create_person(person_type, age, name, more_info, parent_permission: true)
     if person_type == 1
@@ -61,18 +63,12 @@ class App
   end
 
   def display_create_people
-    puts 'Do you want to create a student (1) or a teacher (2) ? [Input the number]:'
-    person_type = gets.chomp.to_i
-    print 'Age:'
-    age = gets.chomp
-    print 'Name:'
-    name = gets.chomp
+    person_type, age, name, more_info = grab_person_data
     case person_type
     when 2
       print 'specialization:'
       specalization = gets.chomp
       create_person(person_type, age, name, specalization)
-      # puts 'Person created successfully'
     when 1
       print 'Has parent permission ? [Y/N]:'
       parent_permission = gets.chomp
@@ -80,15 +76,11 @@ class App
       classroom = gets.chomp
       create_person(person_type, age, name, classroom, parent_permission: true) if %w[Y y].include?(parent_permission)
       create_person(person_type, age, name, classroom, parent_permission: false) if %w[N n].include?(parent_permission)
-      # puts 'Person created successfully'
     end
   end
 
   def display_create_book
-    print 'Title:'
-    title = gets.chomp
-    print 'Author:'
-    author = gets.chomp
+    title, auther = grab_book_data
     create_book(title, author)
     puts 'Book created successfully'
   end
@@ -113,9 +105,7 @@ class App
   end
 
   def display_select_by_id
-    print 'ID of person: '
-    id = gets.chomp.to_i
-    puts 'Rentals:'
+    id = grab_id
     list_rentals(id)
   end
 end
