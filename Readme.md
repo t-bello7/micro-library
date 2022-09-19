@@ -54,6 +54,12 @@ rubocop
 - Twitter: [@__tbello](https://twitter.com/__tbello)
 - LinkedIn: [Bello Oluwatomisin](https://linkedin.com/in/tbello7)
 
+👤 **Sajid Munawar**
+
+- GitHub: [@Sajid](https://github.com/sajid-munawar)
+- LinkedIn: [Sajid Munawar](https://www.linkedin.com/in/sajid-munawar/)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -75,4 +81,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
+
 This project is  [MIT](./LICENSE.md) licensed.
+
