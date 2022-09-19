@@ -86,22 +86,14 @@ class App
   end
 
   def display_create_rental
-    puts 'Select a book from the following list by number:'
-    list_books.each_with_index do |n, index|
-      puts "#{index}) Title: \"#{n.title}\", Author: #{n.author}"
-    end
-    book_id = gets.chomp.to_i
+    book_id = grab_book_index
     book = list_books[book_id]
-    puts 'Select a person from the following list by number(not id):'
-    list_people.each_with_index do |n, index|
-      puts "#{index}) [#{n.class.name}] Name: #{n.name}, ID: #{n.id}, Age: #{n.age}"
-    end
-    person_id = gets.chomp.to_i
+    person_id = grab_person_index
     person = list_people[person_id]
-    print 'Date: '
-    date = gets.chomp
+    date = grab_date
     new_rental = create_rental(date, person, book)
     person.add_rental(new_rental)
+    puts 'Rental created successfully'
   end
 
   def display_select_by_id

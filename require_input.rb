@@ -20,5 +20,26 @@ def grab_id
   print 'ID of person: '
   id = gets.chomp.to_i
   puts 'Rentals:'
-  [id]
+  id
+end
+
+def grab_book_index
+  puts 'Select a book from the following list by number:'
+  list_books.each_with_index do |n, index|
+    puts "#{index}) Title: \"#{n.title}\", Author: #{n.author}"
+  end
+  gets.chomp.to_i
+end
+
+def grab_person_index
+  puts 'Select a person from the following list by number(not id):'
+  list_people.each_with_index do |n, index|
+    puts "#{index}) [#{n.class.name}] Name: #{n.name}, ID: #{n.id}, Age: #{n.age}"
+  end
+  gets.chomp.to_i
+end
+
+def grab_date
+  print 'Date: '
+  gets.chomp
 end
