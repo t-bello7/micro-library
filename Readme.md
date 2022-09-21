@@ -59,7 +59,11 @@ rubocop
 - GitHub: [@Sajid](https://github.com/sajid-munawar)
 - LinkedIn: [Sajid Munawar](https://www.linkedin.com/in/sajid-munawar/)
 
+👤 **Abel Desalegn**
 
+- GitHub: [@Abel-desu](https://github.com/Abel-desu)
+- Twitter: [@Abeldesalegn](https://twitter.com/abeldesalegn97)
+- LinkedIn: [Abel Desalegn](https://www.linkedin.com/in/abel-desalegn92)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
