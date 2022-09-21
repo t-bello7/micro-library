@@ -41,6 +41,10 @@ class App
     Book.all
   end
 
+  def list_rental
+    Rental.all
+  end
+
   def list_people
     Person.all
   end
@@ -109,6 +113,6 @@ class App
   def exit_app
     save_book(list_books)
     save_person(list_people)
-    # save_rentals
+    save_rentals(list_rental)
   end
 end

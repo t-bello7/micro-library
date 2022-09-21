@@ -46,9 +46,24 @@ def save_person(person)
   File.write(person_loc, person_store.to_json)
 end
 
-def save_rentals
-  # if files exist append to it
-  # else create a new file and save to it
+def load_rentals
+  rental_store = []
+  rental_loc = './database/rental.json'
+  if File.exist?(rental_loc)
+    data = File.read(rental_loc)
+    JSON.parse(data).each do |n|
+      rental_store = Rental.new(n['person'], n['book'], n['date'])
+    end
+  else
+    File.write(rental_loc, rental_store)
+  end
 end
 
-# puts load_books
+def save_rentals(rental)
+  rental_store = []
+  rental_loc = './database/rental.json'
+  rental.each do |n|
+    rental_store << { 'person' => n.person, 'Book' => n.book, 'Date' => n.date }
+  end
+  File.write(rental_loc, rental_store.to_json)
+end
