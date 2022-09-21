@@ -108,7 +108,7 @@ class App
 
   def exit_app
     save_book(list_books)
-    # save_person
+    save_person(list_people)
     # save_rentals
   end
 end

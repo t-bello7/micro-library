@@ -1,4 +1,5 @@
 require_relative './book'
+require_relative './person'
 require 'json'
 
 def load_books
@@ -23,9 +24,26 @@ def save_book(books)
   File.write(book_loc, books_store.to_json)
 end
 
-def save_person
-  # if files exist append to it
-  # else create a new file and save to it
+def load_person
+  person_store = []
+  person_loc = './database/person.json'
+  if File.exist?(person_loc)
+    data = File.read(person_loc)
+    JSON.parse(data).each do |n|
+      person_store = Person.new(n['Age'], n['Name'])
+    end
+  else
+    File.write(person_loc, person_store)
+  end
+end
+
+def save_person(person)
+  person_store = []
+  person_loc = './database/person.json'
+  person.each do |n|
+    person_store << { 'Age' => n.age, 'Name' => n.name }
+  end
+  File.write(person_loc, person_store.to_json)
 end
 
 def save_rentals
