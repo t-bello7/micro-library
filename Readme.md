@@ -48,7 +48,7 @@ rubocop
 ```
 ## Authors
 
-👤 **Author1**
+👤 **Bello Oluwatomisin**
 
 - GitHub: [@t-bello7](https://github.com/t-bello7)
 - Twitter: [@__tbello](https://twitter.com/__tbello)

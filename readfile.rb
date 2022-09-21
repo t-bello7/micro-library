@@ -15,6 +15,32 @@ def load_books
   end
 end
 
+def load_person
+  person_store = []
+  person_loc = './database/person.json'
+  if File.exist?(person_loc)
+    data = File.read(person_loc)
+    JSON.parse(data).each do |n|
+      person_store << Person.new(n['Age'], n['Name'])
+    end
+  else
+    File.write(person_loc, person_store)
+  end
+end
+
+def load_rentals
+  rental_store = []
+  rental_loc = './database/rental.json'
+  if File.exist?(rental_loc)
+    data = File.read(rental_loc)
+    JSON.parse(data).each do |n|
+      rental_store << Rental.new(n['person'], n['book'], n['date'])
+    end
+  else
+    File.write(rental_loc, rental_store)
+  end
+end
+
 def save_book(books)
   books_store = []
   book_loc = './database/book.json'
@@ -24,19 +50,6 @@ def save_book(books)
   File.write(book_loc, books_store.to_json)
 end
 
-def load_person
-  person_store = []
-  person_loc = './database/person.json'
-  if File.exist?(person_loc)
-    data = File.read(person_loc)
-    JSON.parse(data).each do |n|
-      person_store = Person.new(n['Age'], n['Name'])
-    end
-  else
-    File.write(person_loc, person_store)
-  end
-end
-
 def save_person(person)
   person_store = []
   person_loc = './database/person.json'
@@ -44,19 +57,6 @@ def save_person(person)
     person_store << { 'Age' => n.age, 'Name' => n.name }
   end
   File.write(person_loc, person_store.to_json)
-end
-
-def load_rentals
-  rental_store = []
-  rental_loc = './database/rental.json'
-  if File.exist?(rental_loc)
-    data = File.read(rental_loc)
-    JSON.parse(data).each do |n|
-      rental_store = Rental.new(n['person'], n['book'], n['date'])
-    end
-  else
-    File.write(rental_loc, rental_store)
-  end
 end
 
 def save_rentals(rental)
