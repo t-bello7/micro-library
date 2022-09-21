@@ -4,8 +4,13 @@ require_relative './rental'
 require_relative './student'
 require_relative './teacher'
 require_relative './require_input'
+require_relative './readfile'
 
 class App
+  def initialize
+    load_books
+  end
+
   def create_person(person_type, age, name, more_info, parent_permission: true)
     if person_type == 1
       Student.new(age, name, more_info, parent_permission: parent_permission)
@@ -34,6 +39,10 @@ class App
 
   def list_books
     Book.all
+  end
+
+  def list_rental
+    Rental.all
   end
 
   def list_people
@@ -99,5 +108,11 @@ class App
   def display_select_by_id
     id = grab_id
     list_rentals(id)
+  end
+
+  def exit_app
+    save_book(list_books)
+    save_person(list_people)
+    save_rentals(list_rental)
   end
 end

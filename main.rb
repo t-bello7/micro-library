@@ -18,6 +18,7 @@ def main
     when 6
       app.display_select_by_id
     when 7
+      app.exit_app
       break
     end
   end
