@@ -9,6 +9,8 @@ require_relative './readfile'
 class App
   def initialize
     load_books
+    load_person
+    load_rentals
   end
 
   def create_person(person_type, age, name, more_info, parent_permission: true)
