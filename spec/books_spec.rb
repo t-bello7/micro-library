@@ -26,3 +26,15 @@ describe Book do
     expect(@book.author).to eq 'MJ john'
   end
 end
+
+describe Book do
+  before :each do
+    @book = Book.new 'coding', 'Abel'
+  end
+  it 'should print the book title' do
+    expect(@book.title).to eq 'coding'
+  end
+  it 'should print the book author' do
+    expect(@book.author).to eq 'Abel'
+  end
+end
