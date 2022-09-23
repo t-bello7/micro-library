@@ -2,7 +2,7 @@ require_relative '../person'
 
 describe CapitalizeDecorator do
   context 'When testing the capitalize_decorator class' do
-    before:each do
+    before :each do
       @person = Person.new(30, 'yankee')
       @capitalizer = CapitalizeDecorator.new(@person)
     end
