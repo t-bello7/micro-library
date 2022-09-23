@@ -41,5 +41,4 @@ describe Solver do
       expect(test3.fizzbuzz(15)).to eq('fizzbuzz')
     end
   end
-  
 end
