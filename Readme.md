@@ -10,13 +10,13 @@
 ## Built With
 - Ruby
 
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 - [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
 - [Ruby](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md)
+
+
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
 ### Setup
 - With git, clone the code to your machine, or download a ZIP of all the files directly.
